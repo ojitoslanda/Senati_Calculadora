@@ -1,41 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora JS/CSS/HTML</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media_query.css">
+    <link rel="stylesheet" href="css/style_calculator_one.css">
+    <link rel="stylesheet" href="css/style_calculator_two.css">
 </head>
+
 <body>
-    <img class="logo" src="img/senati.png" alt="Logo Senati"></td>
-    <table class="calculadora">
-        <tr>
-            <td colspan="4"><span id="resultado"></span></td>
-        </tr>
-        <tr>
-            <td><button id="siente">7</button></td>
-            <td><button id="ocho">8</button></td>
-            <td><button id="nueve">9</button></td>
-            <td><button id="division">/</button></td>
-        </tr>
-        <tr>
-            <td><button id="cuatro">4</button></td>
-            <td><button id="cinco">5</button></td>
-            <td><button id="seis">6</button></td>
-            <td><button id="multiplicacion">*</button></td>
-        </tr>
-        <tr>
-            <td><button id="uno">1</button></td>
-            <td><button id="dos">2</button></td>
-            <td><button id="tres">3</button></td>
-            <td><button id="resta">-</button></td>
-        </tr>
-        <tr>
-            <td><button id="igual">=</button></td>
-            <td><button id="reset">C</button></td>
-            <td><button id="cero">0</button></td>
-            <td><button id="suma">+</button></td>
-        </tr>
-    </table>
+
+    <main>
+        <!-- CONTENEDOR UNO - PRIMERA CALCULADORA -->
+        <div class="contenedor-one">
+            <img class="logo" src="img/senati.png" alt="Logo Senati">
+            <table class="calculadora">
+                <tr>
+                    <td colspan="4"><span class="pantalla">0</span></td>
+                </tr>
+                <tr>
+                    <td><button class="btn" id="reset">C</button></td>
+                    <td><button class="btn" id="borrar"> ← </button></td>
+                    <td><button class="btn">/</button></td>
+                    <td><button class="btn">*</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn">7</button></td>
+                    <td><button class="btn">8</button></td>
+                    <td><button class="btn">9</button></td>
+                    <td><button class="btn" id="suma">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn">4</button></td>
+                    <td><button class="btn">5</button></td>
+                    <td><button class="btn">6</button></td>
+                    <td><button class="btn">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn">1</button></td>
+                    <td><button class="btn">2</button></td>
+                    <td><button class="btn">3</button></td>
+                    <td rowspan="2"><button class="btn btnIgual" id="igual">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="btn btnCero" id="cero">0</button></td>
+                    <td><button class="btn">.</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- CONTENEDOR DOS SEGUNDA CALCULADORA -->
+        <div class="contenedor-two">
+            <img class="logo" src="img/senati2.png" alt="Logo Senati">
+            <div class="calculadora2">
+                <input class="boxNumber" type="text" id="pantalla2" readonly>
+                <br>
+                <input class="boxNumber" type="button" value="1" onclick="agregar('1')">
+                <input class="boxNumber" type="button" value="2" onclick="agregar('2')">
+                <input class="boxNumber" type="button" value="3" onclick="agregar('3')">
+                <input class="boxNumber" type="button" value="+" onclick="agregar('+')">
+                <br>
+                <input class="boxNumber" type="button" value="4" onclick="agregar('4')">
+                <input class="boxNumber" type="button" value="5" onclick="agregar('5')">
+                <input class="boxNumber" type="button" value="6" onclick="agregar('6')">
+                <input class="boxNumber" type="button" value="-" onclick="agregar('-')">
+                <br>
+                <input class="boxNumber" type="button" value="7" onclick="agregar('7')">
+                <input class="boxNumber" type="button" value="8" onclick="agregar('8')">
+                <input class="boxNumber" type="button" value="9" onclick="agregar('9')">
+                <input class="boxNumber" type="button" value="*" onclick="agregar('*')">
+                <br>
+                <input class="boxNumber" type="button" value="0" onclick="agregar('0')">
+                <input class="boxNumber" type="button" value="." onclick="agregar('.')">
+                <input class="boxNumber" type="button" value="/" onclick="agregar('/')">
+                <input class="boxNumber" type="button" value="=" onclick="calcular('')">
+                <br>
+                <input class="boxNumber" type="button" value="C" onclick="borrar()">
+            </div>
+        </div>
+    </main>
+
+
+    <script src="js/script_calculator_one.js"></script>
+    <script src="js/script_calculator_two.js"></script>
 </body>
+
 </html>

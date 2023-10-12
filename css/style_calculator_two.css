@@ -1,0 +1,33 @@
+  .calculadora2{
+    width: 314px;
+    margin: 0 auto;
+    background-color:blue;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*agregar sombras a un elemento*/
+  }
+  
+  #pantalla2{
+    width: 90%;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: right;
+  }
+  
+  .boxNumber {
+    width: 70px;
+    height: 40px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .boxNumber:hover {
+    background-color: #d2a503;
+  }
+  
